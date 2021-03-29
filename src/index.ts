@@ -1,1 +1,1 @@
-export const useAsyncWatcher = () => {}; 
+export const useAsyncWatcher = () => {};
