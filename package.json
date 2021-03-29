@@ -1,0 +1,27 @@
+{
+  "name": "react-async-watcher",
+  "version": "1.0.0",
+  "description": "React hook to execute and watch async function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xralphack/react-async-watcher.git"
+  },
+  "keywords": [
+    "react-async-watcher",
+    "react",
+    "react-native",
+    "async",
+    "hook",
+    "watcher"
+  ],
+  "author": "xralphack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xralphack/react-async-watcher/issues"
+  },
+  "homepage": "https://github.com/xralphack/react-async-watcher#readme"
+}
