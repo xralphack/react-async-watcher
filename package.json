@@ -4,7 +4,8 @@
   "description": "React hook to execute and watch async function",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/xralphack/react-async-watcher/issues"
   },
-  "homepage": "https://github.com/xralphack/react-async-watcher#readme"
+  "homepage": "https://github.com/xralphack/react-async-watcher#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
 }
