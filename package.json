@@ -2,7 +2,11 @@
   "name": "react-async-watcher",
   "version": "1.0.0",
   "description": "React hook to execute and watch async function",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -37,6 +41,7 @@
   },
   "homepage": "https://github.com/xralphack/react-async-watcher#readme",
   "devDependencies": {
+    "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "eslint": "^7.23.0",
