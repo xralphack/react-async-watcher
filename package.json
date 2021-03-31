@@ -1,6 +1,6 @@
 {
   "name": "react-async-watcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook to execute and watch async function",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
