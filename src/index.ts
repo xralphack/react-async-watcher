@@ -1,4 +1,4 @@
-import { useCallback, useReducer } from "react";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 
 type Status = "initial" | "loading" | "success" | "failure";
 
@@ -9,6 +9,15 @@ type State<R> = {
 };
 
 export const useAsyncWatcher = <R extends any>() => {
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
   const initialState: State<R> = {
     status: "initial",
     result: undefined,
@@ -60,15 +69,19 @@ export const useAsyncWatcher = <R extends any>() => {
 
     try {
       const result = await asyncTask();
-      dispatch({
-        type: "success",
-        payload: result,
-      });
+      if (isMounted.current) {
+        dispatch({
+          type: "success",
+          payload: result,
+        });
+      }
     } catch (error) {
-      dispatch({
-        type: "failure",
-        error,
-      });
+      if (isMounted.current) {
+        dispatch({
+          type: "failure",
+          error,
+        });
+      }
     }
   }, []);
 
